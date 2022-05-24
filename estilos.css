@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+
+}
+
+
+body {
+    
+    height: 100%;
+    width: 100%;
+    background-color: rgb(185, 185, 253);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(10 1fr);
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: "header header header header header header header header header header"
+    "main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* Aca empieza el Header */
+.header{
+    width: 100%;
+    grid-area: header;
+}
+h2 {
+    font-size: 30px;
+    padding: 28px;
+}
+
+.imagenfoto {
+    height: 20rem;
+    background-position: top;
+    background-size: cover;
+    background-image: url(./img/portada.jpeg);
+}
+
+nav {
+    display: flex;
+    background-color: rgb(253, 173, 173);  
+    justify-content: space-between;
+}
+
+
+ul li {
+    display: inline-block;
+    margin: 20px 20px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid transparent;  
+    transition: border-bottom 0.4s linear;
+}
+
+a:hover {
+
+    color: aliceblue;
+    border-bottom: 1px solid aliceblue;
+}
+
+
+li {
+    padding: 15px;
+}
+
+
+/* Aca empieza el main */
+
+.main {
+    width: 100%;
+    grid-area: main;
+   
+}
+
+.contenedorflex{
+  
+    display: flex;
+   
+}
+
+p {
+    display: inline-block;
+    width: 100%;
+    letter-spacing: 5px;
+    line-height: 20px;
+}
+
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    font-size: 30px;
+    display: inline-block;
+ 
+   
+}
+
+.texto1 {
+    margin-left: 30px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;  
+    width: 50%; 
+   
+     
+}
+
+
+.imagenmain2{
+    margin-top: 4em;
+    
+
+}
+
+.fotomain {
+    
+    margin: auto 90px;
+    height: 600px;
+}
+
+/* Aca empieza cursos */
+
+.sectioncursos{
+    
+    display: flex;
+    justify-content: space-between;    
+}
+
+
+h4{
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 30px 0;   
+}
+
+.cursos{
+    align-self: center;
+}
+
+.cursos p {
+    width:33rem;
+    text-align: center;
+    font-size: 15px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: olivedrab; 
+    letter-spacing: 1px;
+    
+}
+
+
+.imgcursos img{
+    width:90%;
+    margin-top: 70px;
+}
+
+
+
+
+
+/* Aca empieza cartas */
+
+.sectionclases{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.clases{
+    width: 50%;
+    margin-left: 1.3rem;
+}
+
+.pcartas {
+     
+    width: 100%;
+    letter-spacing: 7px;
+    line-height: 25px;
+}
+
+ .imgclases{
+     width: 30rem;
+     
+ }
+
+ .clases , .imgcartascontenedor{
+     margin-top: 5rem;
+ }
+.imgcartascontenedor{
+    
+    padding: 1rem;
+}
+
+h3{
+    margin: 2rem;
+}
+/* Aca empieza reel */
+
+.contenedorflex_reel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+video{
+    width: 50%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Aca empieza Contacto */
+.contenedorflex_contacto{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    
+    
+    width: 30em;   
+    padding: 30px;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+input{
+    margin: 20px;
+    width: 90%;
+    
+}
+
+textarea{
+    width: 90%;
+    height: 150px;
+    margin: 20px;
+    resize: none;
+    
+    
+}
+
+
+/* Aca empieza FOOTER */
+
+
+.footer {
+    
+    display: flex;
+    justify-content: space-around;       
+    grid-area: footer;
+    background-color: rgb(139, 139, 253); 
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 40px 40px;
+    
+}
+
+.redes{
+    align-self: center;
+}
+.redes a {
+    margin: 0 1.3rem;
+    color: rgb(99, 93, 82);
+    display: inline-block;
+
+}
+
+i {
+    font-size: 1.3rem;
+    
+    color: #000;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media screen and (max-width:768px) {
+    
+    /* Index */
+
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    ul li a{
+        font-size: 1rem;
+    }   
+    p {
+        width: 100%;       
+    }
+    
+    
+   .contenedorflex{
+       flex-direction: column;
+   }
+    
+    .texto1 {
+        width: 90%;        
+        
+    }
+    
+    h3{
+        text-align: center;
+    }
+    
+    .imagenmain2{
+        margin-top: 5em; 
+        margin: 0 auto;
+            
+        
+    }
+    
+    .fotomain {          
+        height: 600px;
+        margin: 0 auto;
+        
+     }
+
+     i {
+        font-size: 20px;
+        margin: 0 ;
+        color: #000;
+    }
+
+    /* cursos */
+
+   .sectioncursos{
+       flex-direction: column;
+   }
+  .imgcursos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+     /* CARTAS */
+     .sectionclases{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+
+   
+   /* REEL */
+   
+   video{
+       width: 500px;
+       
+   }
+   
+ 
+}  
+
+@media screen and (max-width:425px){
+   
+    /* Index */
+
+
+    nav ul li{
+        
+        margin: auto;
+        text-align: center;
+        
+        
+    }
+    h3{
+        text-align: center;
+    }
+    
+      
+    .contenedorflex{
+        flex-direction: column;
+    }
+
+
+     /* cursos */
+
+     .imgcursos1{
+         width: 40%;
+        
+        
+     }
+     
+     .cursos{
+         width: 80%;
+         
+     }
+     .cursos p{
+         width: 100%;
+     }
+
+     /* CLASES */
+
+     .sectionclases{
+        flex-direction: column;
+        
+        
+         
+     }
+     .clases{
+         width: 80%;
+         margin: 0 auto;
+        }
+    .pacartas {
+         width: 90%;
+     }
+     .imgcartascontenedor {
+       width: 90%;
+
+     } 
+
+     .imgclases{
+        width: 100%;
+     }
+       
+      
+      
+    
+
+    /* REEL */
+    video{
+        width: 80%;
+    }
+
+    /* footer */
+   
+     .fa-brands{
+         font-size: 1rem;
+     }
+     .redes{
+         width: 100%;
+         
+     }
+    .redes a{
+        margin: 0 1rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+
+    fieldset{
+        width: 20em;
+    }
+}
